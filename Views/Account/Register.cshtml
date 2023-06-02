@@ -1,0 +1,131 @@
+﻿@model Blog.Models.Register
+@{
+    ViewBag.Title = "Register";
+
+
+}
+
+<div class="container">
+    <br />
+    <div class="row">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/Home/Index">Anasayfa</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Kayıt OL</li>
+            </ol>
+        </nav>
+        <div class="col-md-8">
+            <!--Makaleler-->
+            <div class="img-thumbnail"
+               <br />
+                @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "row" }))
+                 {
+                     <div class="row mb-3" style="text-align:center">
+                         <label class="col-sm-2 col-form-label">Adı</label>
+                         <div class=" col-sm-4">
+                             @Html.EditorFor(m=> m.Name, new {htmlAttributes=new {@class="form-control"}})
+                             @Html.ValidationMessageFor(m => m.Name, "", new {@class="text-danger"})
+                         </div>
+                     </div>
+                    <div class="row mb-3" style="text-align:center">
+                        <label class="col-sm-2 col-form-label">Soyadı</label>
+                        <div class=" col-sm-4">
+                            @Html.EditorFor(m=> m.Surname, new {htmlAttributes=new {@class="form-control"}})
+                            @Html.ValidationMessageFor(m => m.Surname, "", new {@class="text-danger"})
+                        </div>
+                    </div>
+                     <div class="row mb-3" style="text-align:center">
+                         <label class="col-sm-2 col-form-label">Kullanıcı Adı</label>
+                         <div class=" col-sm-4">
+                             @Html.EditorFor(m=> m.Username, new {htmlAttributes=new {@class="form-control"}})
+                             @Html.ValidationMessageFor(m => m.Username, "", new {@class="text-danger"})
+                         </div>
+                     </div>
+                     <div class="row mb-3" style="text-align:center">
+                         <label class="col-sm-2 col-form-label">E-mail</label>
+                         <div class=" col-sm-4">
+                             @Html.EditorFor(m=> m.Email, new {htmlAttributes=new {@class="form-control"}})
+                             @Html.ValidationMessageFor(m => m.Email, "", new {@class="text-danger"})
+                         </div>
+                     </div>
+                     <div class="row mb-3" style="text-align:center">
+                         <label class="col-sm-2 col-form-label">Şifre</label>
+                         <div class=" col-sm-4">
+                             @Html.EditorFor(m=> m.Password, new {htmlAttributes=new {@class="form-control"}})
+                             @Html.ValidationMessageFor(m => m.Password, "", new {@class="text-danger"})
+                         </div>
+                     </div>
+                     <div class="row mb-3" style="text-align:center">
+                         <label class="col-sm-2 col-form-label">ŞİFRE TEKRAR</label>
+                         <div class=" col-sm-4">
+                             @Html.EditorFor(m=> m.RePassword, new {htmlAttributes=new {@class="form-control"}})
+                             @Html.ValidationMessageFor(m => m.RePassword, "", new {@class="text-danger"})
+                         </div>
+                     </div>
+                     <div class="row mb-3" style="text-align:center">
+                         <label class="col-sm-2 col-form-label"></label>
+                         <div class=" col-sm-4">
+                             <button type="submit"class="btn btn-outline-primary col-6"><i class="bi bi-person-circle"></i>Kayıt OL </button>
+                         </div>
+                     </div>
+                 }
+            </div>
+        </div>
+        <div class="col-md-4">
+                <!--Kategori-->
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                        Tüm Kategoriler
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">Kategori A</a>
+                    <a href="#" class="list-group-item list-group-item-action">Kategori B</a>
+                    <a href="#" class="list-group-item list-group-item-action">Kategori C</a>
+
+                </div>
+                <br />
+                <h6 style="color:purple">En Çok Okunanlar</h6>
+                <div class="card mb-3" style="max-width: 355px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="/content/images/english.png" alt="..." width="90" height="90">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+
+                                <p class="card-text">Başlık</p>
+
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted"><i class="bi bi-clock-history" style="font-size:20px"></i>Tarih--<i class="bi bi-eye" style="font-size:20px"></i> 10 Görüntülenme</small>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="card mb-3" style="max-width: 355px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="/content/images/a1.png" alt="..." width="90" height="90">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+
+                                <p class="card-text">Başlık</p>
+
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted"><i class="bi bi-clock-history" style="font-size:20px"></i>Tarih--<i class="bi bi-eye" style="font-size:20px"></i> 10 Görüntülenme</small>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+        </div>
+        </div>
+    </div>
+
+

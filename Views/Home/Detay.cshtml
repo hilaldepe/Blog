@@ -1,0 +1,80 @@
+﻿@model  List<Blog.Models.Makale>   
+@{
+    ViewBag.Title = "Detay";
+}
+
+<div class="container">
+    <br />
+    <div class="row">
+        <div class="col-md-8">
+            <!--Makaleler-->
+            <div class="card-group">
+                <div class="card">
+                    <img src="/content/images/@ViewBag.makale.Resim" class="card-img-top" alt="..." height="300">
+                    <div class="card-body">
+                        <h5 class="card-title">@ViewBag.makale.Baslik</h5>
+                        <p class="card-text">@ViewBag.makale.Acıklama</p>
+
+                    </div>
+
+                </div>
+            </div>
+            <br />
+
+        </div>
+        <div class="col-md-4">
+            <!--Kategori-->
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                    Tüm Kategoriler
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">Kategori A</a>
+                <a href="#" class="list-group-item list-group-item-action">Kategori B</a>
+                <a href="#" class="list-group-item list-group-item-action">Kategori C</a>
+
+            </div>
+            <br />
+            <h6 style="color:purple">En Çok Okunanlar</h6>
+            <div class="card mb-3" style="max-width: 355px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/content/images/english.png" alt="..." width="90" height="90">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+
+                            <p class="card-text">Başlık</p>
+
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted"><i class="bi bi-clock-history" style="font-size:20px"></i>Tarih--<i class="bi bi-eye" style="font-size:20px"></i> 10 Görüntülenme</small>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="card mb-3" style="max-width: 355px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/content/images/a1.png" alt="..." width="90" height="90">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+
+                            <p class="card-text">Başlık</p>
+
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted"><i class="bi bi-clock-history" style="font-size:20px"></i>Tarih--<i class="bi bi-eye" style="font-size:20px"></i> 10 Görüntülenme</small>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+</div>
